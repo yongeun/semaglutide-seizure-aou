@@ -141,14 +141,8 @@ process_comparison <- function(exp_idx, comp_idx, base_cohort) {
     filter(is.na(epilepsy_or_seizure_start_date) |
            epilepsy_or_seizure_start_date >= index_date) %>%
 
-    # Exclusion: pre-index MCI
-    filter(is.na(mci_start_date) | mci_start_date >= index_date) %>%
-
-    # Exclusion: pre-index ADRD
-    filter(is.na(adrd_start_date) | adrd_start_date >= index_date) %>%
-
-    # Exclusion: pre-index stroke
-    filter(is.na(stroke_start_date) | stroke_start_date >= index_date)
+    # Exclusion: sequential users with crossover (assign to first drug only)
+    filter(is.na(crossover_date))
 
   cohort
 }

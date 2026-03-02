@@ -176,10 +176,8 @@ ps_exclude_map <- list(
 #
 # EXCLUSION:
 #   1. Pre-index epilepsy or seizure (outcome start_date < index_date)
-#   2. Pre-index mild cognitive impairment (MCI)
-#   3. Pre-index Alzheimer's disease or related dementias (ADRD)
-#   4. Pre-index stroke
-#   5. [Late-onset cohort only] Pre-index seizure at any age
+#   2. Insufficient follow-up (event_time <= 0)
+#   3. [Late-onset cohort only] Pre-index seizure at any age
 #
 # SECONDARY ANALYSIS:
 #   Late-onset seizure: restricted to participants age >= 60 at index date

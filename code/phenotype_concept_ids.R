@@ -73,17 +73,16 @@ hypoglycemia_src <- c(
 )
 
 # =============================================================================
-# EXCLUSION PHENOTYPES
+# ADDITIONAL PHENOTYPES (used as covariates, NOT as exclusion criteria)
 # =============================================================================
-# Participants with these conditions BEFORE index date are excluded from cohort
+# These phenotypes are extracted as flags and used in the propensity score model
+# or for descriptive characterization. They are NOT used to exclude participants.
 
 # --- MCI (Mild Cognitive Impairment) -----------------------------------------
-# Exclusion rationale: MCI is associated with seizure risk and may confound
 mci_src <- c(44823010, 45553737, 45595932, 37402458)
 # ICD-10: G31.84 (Mild cognitive impairment)
 
 # --- ADRD (Alzheimer's Disease & Related Dementias) ---------------------------
-# Exclusion rationale: Dementia is a strong independent risk factor for seizures
 adrd_std <- c(
   380701,   # Alzheimer's disease
   43021816, # Frontotemporal dementia
@@ -107,7 +106,6 @@ adrd_src <- c(
 # other diseases), F03.x (Unspecified dementia), G31.0x (Frontotemporal)
 
 # --- Stroke -------------------------------------------------------------------
-# Exclusion rationale: Post-stroke seizures are a distinct clinical entity
 stroke_std <- c(
   4045734,  # Ischemic stroke
   437847,   # Cerebral infarction

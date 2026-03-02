@@ -62,9 +62,7 @@ This repository contains the analysis code for a target trial emulation examinin
 **Exclusion:**
 - Any use of the index drug or active comparator in the 183-day washout window
 - Pre-index epilepsy or seizure diagnosis
-- Pre-index mild cognitive impairment (MCI)
-- Pre-index Alzheimer's disease or related dementias (ADRD)
-- Pre-index stroke
+- Insufficient follow-up (event_time <= 0)
 
 ## Code Structure
 
